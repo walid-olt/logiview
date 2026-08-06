@@ -7,7 +7,7 @@ export interface Package {
   destination: string;
   status: PackageStatus;
   weightKg: number;
-  shippedDate: string; // ISO date
+  shippedDate: Date;
 }
 
 export interface Vehicle {

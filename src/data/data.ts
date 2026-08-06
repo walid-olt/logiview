@@ -7,7 +7,7 @@ export const PACKAGES: Package[] = [
     destination: "Lyon",
     status: "En transit",
     weightKg: 18.5,
-    shippedDate: "2026-08-01",
+    shippedDate: new Date("2026-08-01"),
   },
   {
     id: "pkg-2",
@@ -15,7 +15,7 @@ export const PACKAGES: Package[] = [
     destination: "Marseille",
     status: "En transit",
     weightKg: 42.0,
-    shippedDate: "2026-08-02",
+    shippedDate: new Date("2026-08-02"),
   },
   {
     id: "pkg-3",
@@ -23,7 +23,7 @@ export const PACKAGES: Package[] = [
     destination: "Bordeaux",
     status: "Livré",
     weightKg: 7.2,
-    shippedDate: "2026-07-29",
+    shippedDate: new Date("2026-07-29"),
   },
   {
     id: "pkg-4",
@@ -31,7 +31,7 @@ export const PACKAGES: Package[] = [
     destination: "Nantes",
     status: "En transit",
     weightKg: 25.8,
-    shippedDate: "2026-08-03",
+    shippedDate: new Date("2026-08-03"),
   },
   {
     id: "pkg-5",
@@ -39,7 +39,7 @@ export const PACKAGES: Package[] = [
     destination: "Lille",
     status: "Livré",
     weightKg: 11.0,
-    shippedDate: "2026-07-30",
+    shippedDate: new Date("2026-07-30"),
   },
 ];
 

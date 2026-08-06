@@ -1,18 +1,12 @@
 import { useMemo } from "react";
 import { View, ScrollView, Text, StyleSheet } from "react-native";
-import { StatusBar } from "expo-status-bar";
 import { PACKAGES, VEHICLES } from "@/src/data/data";
 import Header from "@/src/components/Header";
 import SearchBar from "@/src/components/SearchBar";
 import SectionTitle from "@/src/components/SectionTitle";
 import FilterButton from "@/src/components/FilterButton";
 import Card from "@/src/components/Card";
-import {
-  useStore,
-  filterPackages,
-  filterVehicles,
-  type PackageFilter,
-} from "@/src/store/useStore";
+import { useStore, filterPackages, filterVehicles, type PackageFilter } from "@/src/store/useStore";
 
 const FILTER_OPTIONS: PackageFilter[] = ["Tous", "En transit", "Livré"];
 
@@ -30,7 +24,6 @@ export default function Index() {
 
   return (
     <View style={styles.screen}>
-      <StatusBar style="light" />
       <Header />
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
         <SearchBar value={query} onChangeText={setQuery} />

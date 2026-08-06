@@ -2,8 +2,18 @@ import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
 import type { Package, Vehicle, PackageStatus, VehicleStatus } from "@/src/types";
 
 type CardProps =
-  | { variant: "package"; data: Package; expanded: boolean; onPress: () => void }
-  | { variant: "vehicle"; data: Vehicle; expanded: boolean; onPress: () => void };
+  | {
+      variant: "package";
+      data: Package;
+      expanded: boolean;
+      onPress: () => void;
+    }
+  | {
+      variant: "vehicle";
+      data: Vehicle;
+      expanded: boolean;
+      onPress: () => void;
+    };
 
 const STATUS_COLORS: Record<string, { bg: string; fg: string }> = {
   Disponible: { bg: "#DCFCE7", fg: "#166534" },
@@ -21,9 +31,8 @@ const StatusBadge = ({ status }: { status: PackageStatus | VehicleStatus }) => {
   );
 };
 
-const formatDate = (isoDate: string): string => {
-  const date = new Date(isoDate);
-  return date.toLocaleDateString("en-GB", {
+const formatDate = (isoDate: Date): string => {
+  return isoDate.toLocaleDateString("en-GB", {
     day: "numeric",
     month: "short",
     year: "numeric",

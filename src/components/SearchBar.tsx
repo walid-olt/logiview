@@ -16,7 +16,6 @@ const SearchBar = ({ value, onChangeText }: SearchBarProps) => {
         placeholderTextColor="#94A3B8"
         autoCorrect={false}
         autoCapitalize="none"
-        clearButtonMode="while-editing"
       />
     </View>
   );
